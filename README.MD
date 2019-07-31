@@ -1,4 +1,4 @@
-# Scrabble app
+# Newsletter microservices
 
 ## Description
 Main purpose of application is:

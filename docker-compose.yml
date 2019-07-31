@@ -1,0 +1,47 @@
+version: "3.7"
+
+services:
+    rabbitmq:
+        image: "rabbitmq:3-management"
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        expose:
+            - "5672"
+        labels:
+            NAME: "rabbitmq"
+        hostname: rabbit
+        network_mode: host
+
+    email-service:
+        image: zavodny/email-service:0.0.1-SNAPSHOT
+        ports:
+            - "8200:8200"
+        expose:
+            - "8200"
+        labels:
+            NAME: "email-service"
+        hostname: email-service
+        network_mode: host
+
+    subscription-service:
+        image: zavodny/subscription-service:0.0.1-SNAPSHOT
+        ports:
+            - "8100:8100"
+        expose:
+            - "8100"
+        labels:
+            NAME: "subscription-service"
+        hostname: subscription-service
+        network_mode: host
+
+    public-service:
+        image: zavodny/public-service:0.0.1-SNAPSHOT
+        ports:
+            - "8000:8000"
+        expose:
+            - "8000"
+        labels:
+            NAME: "public-service"
+        hostname: public-service
+        network_mode: host

@@ -23,7 +23,7 @@ Backend
 - Spring JPA
 - H2 Database
 
-##Project Structure
+## Project Structure
 Project is divided into three microservices - Public, Subscription and Email. 
 
 Each one has its own Dockerfile to generate its appropriate docker image. Images are created just for local purposes without pushing to dockerhub repo.
@@ -83,6 +83,6 @@ After submitting POST you shall receive id of subscription as response and also 
 There are still many things that could be improved. What comes first to my mind is e.g. unit tests with proper mocking.
 Implementing load-balancing of Ribbon or before-mentioned framework Eureka from Spring I stumbled upon. And also frontend part which is missing with proper mail template.
 
-##API
+## API
 
 For each service there is swagger and swagger-ui to be used on endpoints "/v2/api-docs" respectively "/swagger-ui.html"

@@ -20,6 +20,7 @@ public class PublicController {
 
     @PostMapping("/newsletter-subscription")
     public Long submitSubscription(@Valid @RequestBody Subscription subscription) {
+        log.info("Received subscription " + subscription + " to be created");
         return subscriptionServiceProxy.createSubscription(subscription);
     }
 }
